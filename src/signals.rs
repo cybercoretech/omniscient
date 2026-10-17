@@ -1760,7 +1760,7 @@ pub fn assess_ecosystem_unit(
                 "journalctl {} {id} -n 50 --no-pager",
                 if scope == "user" { "--user-unit" } else { "-u" }
             ),
-            "https://github.com/cybercore-tech",
+            "https://github.com/cybercoretech",
         ),
     )
 }

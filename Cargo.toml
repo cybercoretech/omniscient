@@ -4,7 +4,7 @@ version = "0.1.0"
 edition = "2021"
 description = "CYBERDECK full system audit tool"
 license = "MIT"
-repository = "https://github.com/cybercore-tech/omniscient"
+repository = "https://github.com/cybercoretech/omniscient"
 
 [lints.rust]
 unsafe_code = "forbid"
