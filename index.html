@@ -134,7 +134,7 @@ footer { border-top:1px solid var(--line); padding:30px 0 44px; color:var(--mute
       <span>OMNISCIENT</span><em>/</em><span>CYBERCORE</span>
     </a>
     <div class="nav">
-      <a href="#surface">Surface</a><a href="#modules">Modules</a><a href="#reports">Reports</a><a href="#showcase">Showcase</a><a href="https://github.com/cybercore-tech/omniscient">Source</a>
+      <a href="#surface">Surface</a><a href="#modules">Modules</a><a href="#reports">Reports</a><a href="#showcase">Showcase</a><a href="https://github.com/cybercoretech/omniscient">Source</a>
       <div class="theme-picker">
         <button class="theme-picker-btn" id="themeButton" aria-expanded="false"><i class="swatch"></i><span id="themeLabel">neon night</span><span>⌄</span></button>
         <div class="theme-menu" id="themeMenu" hidden></div>
@@ -150,7 +150,7 @@ footer { border-top:1px solid var(--line); padding:30px 0 44px; color:var(--mute
       <div class="eyebrow">full-system audit console / rust 0.1.x</div>
       <h1>See the whole system.<span class="accent">Keep the signal.</span></h1>
       <p class="hero-copy"><strong>Omniscient</strong> turns Linux inspection into one readable, repeatable surface — hardware, storage, services, network state, capabilities, and the report that connects them.</p>
-      <div class="actions"><a class="btn primary" href="#install">Deploy the console →</a><a class="btn" href="https://github.com/cybercore-tech/omniscient">View source</a></div>
+      <div class="actions"><a class="btn primary" href="#install">Deploy the console →</a><a class="btn" href="https://github.com/cybercoretech/omniscient">View source</a></div>
       <div class="hero-meta"><div><b>17</b>audit modules</div><div><b>10</b>diagnostic domains</div><div><b>2</b>focused scan paths</div></div>
     </div>
     <div class="hero-art" aria-label="Omniscient radar logo">
@@ -225,7 +225,7 @@ footer { border-top:1px solid var(--line); padding:30px 0 44px; color:var(--mute
 
 <section id="reports">
   <div class="wrap split">
-    <div class="dashboard"><img src="https://raw.githubusercontent.com/cybercore-tech/omniscient/main/assets/omniscient-dashboard-v0.1.0.png" alt="Omniscient audit dashboard preview"></div>
+    <div class="dashboard"><img src="https://raw.githubusercontent.com/cybercoretech/omniscient/main/assets/omniscient-dashboard-v0.1.0.png" alt="Omniscient audit dashboard preview"></div>
     <div class="copy"><div class="kicker">Readable by design</div><h2>Scan once.<br>Keep the evidence.</h2><p>Every run ends in a linked Markdown report beneath <strong>~/.local/state/omniscient/</strong>. The summary keeps command failures, missing capabilities, and health signals in view.</p><p>The Omarchy HUD separates <strong>RUN FULL AUDIT</strong> from <strong>PACKAGE SCAN</strong>. The package reader groups evidence into <strong>ARCH OFFICIAL</strong>, <strong>OMARCHY</strong>, <strong>BLACKARCH</strong>, <strong>CHAOTIC AUR</strong>, and <strong>AUR / FOREIGN</strong>, then marks each version <strong>CURRENT</strong> or <strong>UPDATE AVAILABLE</strong> using pacman's own update metadata.</p><div class="window"><div class="titlebar"><i></i><i></i><i></i><span>report / latest</span></div><div class="window-body"><pre><span class="value">PASS</span>  hardware.md
 <span class="value">PASS</span>  network.md
 <span class="value">WARN</span>  smartctl unavailable
@@ -252,16 +252,16 @@ footer { border-top:1px solid var(--line); padding:30px 0 44px; color:var(--mute
 </section>
 
 <section id="install">
-  <div class="wrap"><div class="install"><div><div class="kicker">Deploy the signal</div><h2>Put Omniscient<br>on the deck.</h2><p>Stable Rust, a real terminal, and a Linux system worth understanding.</p></div><div><a class="btn primary" href="https://github.com/cybercore-tech/omniscient#installation-build--deploy">Read the install path →</a><a class="btn" href="https://github.com/cybercore-tech/omniscient/releases">Releases</a></div></div></div>
+  <div class="wrap"><div class="install"><div><div class="kicker">Deploy the signal</div><h2>Put Omniscient<br>on the deck.</h2><p>Stable Rust, a real terminal, and a Linux system worth understanding.</p></div><div><a class="btn primary" href="https://github.com/cybercoretech/omniscient#installation-build--deploy">Read the install path →</a><a class="btn" href="https://github.com/cybercoretech/omniscient/releases">Releases</a></div></div></div>
 </section>
 </main>
 
 
-<!-- Cybercore Tech contact block: one shared source for every site (cybercore-tech.github.io/kit/contact.js + data/contact.json) -->
+<!-- Cybercore Tech contact block: one shared source for every site (cybercoretech.github.io/kit/contact.js + data/contact.json) -->
 <section class="cc-contact-band" aria-label="Contact Cybercore Tech" style="width:min(1120px,calc(100% - 2.5rem));margin:4.5rem auto 0;padding:2.25rem 0 1.75rem;border-top:1px solid var(--line,#32303e)">
   <cybercore-contact repo="omniscient" bare><a href="mailto:dev@cybercoretech.net">dev@cybercoretech.net</a></cybercore-contact>
 </section>
-<footer><div class="wrap foot"><div>OMNISCIENT / CYBERCORE · MIT LICENSED · FULL-SYSTEM SIGNAL</div><div class="foot-links"><a href="https://github.com/cybercore-tech/omniscient">GitHub</a><a href="https://github.com/cybercore-tech/cybercore">Cybercore schema</a><a href="#top">Back to top ↑</a></div></div></footer>
+<footer><div class="wrap foot"><div>OMNISCIENT / CYBERCORE · MIT LICENSED · FULL-SYSTEM SIGNAL</div><div class="foot-links"><a href="https://github.com/cybercoretech/omniscient">GitHub</a><a href="https://github.com/cybercoretech/cybercore">Cybercore schema</a><a href="#top">Back to top ↑</a></div></div></footer>
 
 <script>
 const THEMES = {
@@ -354,7 +354,7 @@ let saved = 'neon-night'; try { saved = localStorage.getItem('omniscient-theme')
     themeButton.setAttribute("aria-expanded", "false");
     document.querySelectorAll(".theme-option").forEach(option => option.setAttribute("aria-selected", String(option.dataset.value === name)));
     try {
-      const response = await fetch("https://cybercore-tech.github.io/data/themes/" + family + "/" + name + ".json");
+      const response = await fetch("https://cybercoretech.github.io/data/themes/" + family + "/" + name + ".json");
       if (!response.ok) throw new Error("palette " + response.status);
       const palette = await response.json();
       const map = {bg:"--bg",white:"--fg",acid_green:"--acid",hot_pink:"--pink",purple:"--purple",cyan:"--cyan",orange:"--orange",red:"--red",panel:"--panel",line:"--line",muted:"--muted"};
@@ -377,6 +377,6 @@ let saved = 'neon-night'; try { saved = localStorage.getItem('omniscient-theme')
   applyCanonical(allNames.includes(saved) ? saved : "cybercore-tech");
 })();
 </script>
-  <script type="module" src="https://cybercore-tech.github.io/kit/contact.js"></script>
+  <script type="module" src="https://cybercoretech.github.io/kit/contact.js"></script>
 </body>
 </html>
