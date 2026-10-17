@@ -2128,7 +2128,7 @@ mod tests {
         let findings = assess_crashes(&grouped);
         assert_eq!(findings.len(), 1, "a single crash is not a trend");
         assert_eq!(findings[0].severity, Severity::Watch);
-        assert!(group_coredumps("not json").is_empty());
+        assert_eq!(group_coredumps("not json"), vec![]);
     }
 
     #[test]
@@ -2208,7 +2208,7 @@ mod tests {
             severities,
             vec![Severity::Urgent, Severity::Watch, Severity::Warning]
         );
-        assert!(assess_btrfs("/", &[], Some(10), Some(0.5)).is_empty());
+        assert_eq!(assess_btrfs("/", &[], Some(10), Some(0.5)), vec![]);
     }
 
     #[test]
@@ -2240,7 +2240,7 @@ mod tests {
             "/dev/sda",
             &serde_json::json!({"smart_status": {"passed": true}}),
         );
-        assert!(healthy.is_empty());
+        assert_eq!(healthy, vec![]);
     }
 
     #[test]
