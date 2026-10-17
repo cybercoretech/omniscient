@@ -1,12 +1,12 @@
 # ⟦◈⟧ OMNISCIENT // CYBERCORE SYSTEM AUDIT
 
-[![CI](https://github.com/cybercore-tech/omniscient/actions/workflows/ci.yml/badge.svg)](https://github.com/cybercore-tech/omniscient/actions/workflows/ci.yml)
+[![CI](https://github.com/cybercoretech/omniscient/actions/workflows/ci.yml/badge.svg)](https://github.com/cybercoretech/omniscient/actions/workflows/ci.yml)
 
 `omniscient` is the full-system audit console for the Cybercore family: a
 Rust-powered, full-screen Ratatui dashboard that turns system inspection into
 a readable, repeatable report.
 
-**Live console:** [cybercore-tech.github.io/omniscient](https://cybercore-tech.github.io/omniscient/)
+**Live console:** [cybercoretech.github.io/omniscient](https://cybercoretech.github.io/omniscient/)
 
 It began as a fish-shell cyberdeck with an ASCII HUD, a scanning animation,
 and an `fzf` module picker. The Rust release keeps that spirit while adding a
@@ -90,7 +90,7 @@ addresses appear. Regenerate them after UI changes with one command.
 Clone and install:
 
 ```bash
-git clone https://github.com/cybercore-tech/omniscient.git
+git clone https://github.com/cybercoretech/omniscient.git
 cd omniscient
 ./install.sh
 ```

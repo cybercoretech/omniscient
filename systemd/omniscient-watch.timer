@@ -1,6 +1,6 @@
 [Unit]
 Description=Hourly Omniscient watch
-Documentation=https://github.com/cybercore-tech/omniscient
+Documentation=https://github.com/cybercoretech/omniscient
 
 [Timer]
 OnStartupSec=10min

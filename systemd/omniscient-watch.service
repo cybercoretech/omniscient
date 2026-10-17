@@ -1,6 +1,6 @@
 [Unit]
 Description=Omniscient watch: alert on new system problems
-Documentation=https://github.com/cybercore-tech/omniscient
+Documentation=https://github.com/cybercoretech/omniscient
 After=graphical-session.target
 
 [Service]
