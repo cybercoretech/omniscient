@@ -1,6 +1,12 @@
 name: Release
 
 on:
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: Existing tag to build and release (e.g. v0.1.0)
+        required: true
+        type: string
   push:
     tags:
       - 'v*'
@@ -9,6 +15,8 @@ permissions:
   contents: write
 
 env:
+  # The pushed tag, or the tag asked for when run by hand.
+  RELEASE_TAG: ${{ inputs.tag || github.ref_name }}
   CARGO_TERM_COLOR: always
 
 jobs:
@@ -19,6 +27,7 @@ jobs:
       - name: Checkout tag
         uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
         with:
+          ref: ${{ env.RELEASE_TAG }}
           persist-credentials: false
 
       - name: Install stable Rust
@@ -29,16 +38,16 @@ jobs:
 
       - name: Package binary
         env:
-          RELEASE_VERSION: ${{ github.ref_name }}
+          RELEASE_VERSION: ${{ env.RELEASE_TAG }}
         run: ./scripts/package.sh
 
       - name: Publish GitHub Release
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          gh release create "${GITHUB_REF_NAME}" \
+          gh release create "${RELEASE_TAG}" \
             dist/*.tar.gz \
             dist/*.sha256 \
             --verify-tag \
             --generate-notes \
-            --title "Omniscient ${GITHUB_REF_NAME}"
+            --title "Omniscient ${RELEASE_TAG}"
